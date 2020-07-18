@@ -16,7 +16,7 @@
 * Polimorfismo ajuda a desacoplar as funcionalidades diminiundo a complexidade ciclomática.
 
 #### Injeção de dependência
-* o principal problena é não se tem a ratreabilidade ficam escondidas(grafo profundo).
+* o principal problema é que não se tem a rastreabilidade, ficam escondidas(grafo profundo).
 
 #### Como resolver o problema de Coesão e Acoplamento
 * Inversão de Controle e utilizar o padrão de injeção de dependência, para diminuir o acoplamento. Basicamente seria criar interface para as classes e assim o chamador apontaria para as interfaces e não para as classes concretas.
