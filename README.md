@@ -62,9 +62,7 @@
   
 #### Strategy
 * É um padrão que permite mudar o comportamento do algorítimo em tempo de execução.
-* Objetos são criados para representar diversas estratégias(interface + classes concretas) e um objeto de contexto(classe executora) cujo o comportamento varia conforme seu objeto de estratégia(classes concretaas).
-* O objeto de estratégia altera o algoritimo de execução do objeto de contexto.
-* Contexto é uma classe executora da ação que usa ou injeta uma estratégia(interface).
+* Define uma estratégia para executar algum algoritmo. Uma família de classes intercambiáveis, uma para cada algoritmo, implementa o entrelaçamento.
 * **Quando usar strategy?** quando temos um conjunto de algoritmos similares, e precisamos alternar entre eles em diferentes pedaços da aplicação.
 
 #### Chain Of Responsibility
@@ -73,7 +71,7 @@
 * Diminui o **acoplamento** por evitar a associação explícita do remetente de uma solicitação ao seu receptor e dar a mais de um objeto a oportunidade de tratar a solicitação.
 * **Quando usar o Chain of Responsibility?**  quando temos vários comandos a serem executados em sequência, e sabemos também qual o próximo cenário que deve ser validado, caso o anterior não satisfaça a condição(substitui os if's).
 
-#### Chain Of Responsibility
-* É um padrão para remover o auto nível de duplicação
-*
-*
+#### Template Method
+* Define o esqueleto de um algoritmo, adiando algumas etapas para as subclasses. O Método do Modelo permite que as subclasses redefinam certas etapas de um algoritmo sem alterar a estrutura do algoritmo.
+* **Que problema ele resolve?** é normalmente usado em estruturas de aplicativos baseadas em derivação fornecendo um conjunto de superclasses que fazem 90% do trabalho adiando operações específicas de aplicativos para métodos abstratos. 
+* **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.  
