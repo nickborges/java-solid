@@ -1,4 +1,4 @@
-package design_patterns.behavior.templateMethod;
+package design_patterns.behavior.templateMethod.exemplo1;
 
 public class TemplateMethodMain {
 
