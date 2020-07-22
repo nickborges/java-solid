@@ -7,7 +7,7 @@ public abstract class Relatorio {
     protected abstract void corpo(List<Conta> contas);
     protected abstract void rodape();
 
-    public void imprime(List<Conta> contas){
+    public final void imprime(List<Conta> contas){
         cabecalho();
         corpo(contas);
         rodape();
