@@ -1,8 +1,10 @@
 ## Conceitos
-#### Herança vs Composição
-* **Composição:** quando utilizado um componente(classe) como sendo atributo dentro de outra classe.
-  * Exemplo, quando utilizado um List não devemos expor os métodos get e set, devemos criar determinados métodos dentro da própria classe que acessam o atributo para realizar o que se deseja.  
-* **Herança:** quando uma classe estende de uma outra e herda o comportamento desta classe.
+#### SOLID
+* [S]ingle Responsibility Principle (Coesão)
+* [O]pen/Closed Principle (Encapsulamento, classes fechadas para modificação mas abertas para extensão)
+* [L]iskov Substitution Principle (Herança, todas as ações devem ter pré-condições e pós condições)
+* [I]nterface Segregation Principle (A interface deve prover para as filhas, somente com coisas que elas precisam)
+* [D]ependency Inversion Principle (Depender sempre da classe mais estável(Abstração), Abstrações devem depender de abstrações, e implementação deve depender de abstração).
 
 #### Coesão
 * Refere-se ao princípio da responsabilidade única, cada classe deve ter a sua responsabilidade(**Single Responsibility Principle(SRP)**) 
@@ -10,10 +12,25 @@
   
 #### Acoplamento
 * Refere-se a dependência e significa o quanto uma classe depende da outra para funcionar. 
+* *Como resolver o problema de acoplamento?* 
+  * Utilizando interfaces(Polimorfismo) que respeitem o SRP, ajuda a desacoplar as funcionalidades diminiundo a complexidade ciclomática.
+  
+#### Encapsulamento
+* Encapsular é esconder os detalhes da implementação dentro da classe.
 * Princípio *"Tell, Don't Ask'"*, refere-se a não pedir para fazer determinada ação exemplo getListaXpto e sim mandar fazer determinada ação, acessando o método criado na classe secundário em que se deseja alterar.
 * **The Law Demeter**
-  * Heurística referente ao encapsulamento dos dados de uma classe, onde não deve-se passar informações para tais atributos utilizando o getter e muito menos o setter. É necessario criar um método para realizar tal ação.
-* Polimorfismo ajuda a desacoplar as funcionalidades diminiundo a complexidade ciclomática.
+  * Heurística referente ao encapsulamento dos dados de uma classe, onde não deve-se passar informações para tais atributos utilizando o getter e muito menos o setter evitando a cadeia a.getB().getC().getD().acao(). É necessario criar um método para realizar tal ação.
+* Como descobrir se um código está encapsulado ou não? respondendo as seguinte pergunta.
+  * Consigo saber COMO a classe está implementando uma regra de negócio? a resposta deve ser não(a implementação deve ficar escondida).
+
+#### Herança vs Composição
+* [L]iskov Substitution Principle: https://en.wikipedia.org/wiki/Liskov_substitution_principle
+* **Herança:** quando uma classe estende de uma outra e herda o comportamento desta classe.
+  * em cada método que a classe filha herdou e sobrescreveu, lembrar que as pré-condições não podem ser apertadas, e as pós-condições não podem serem afrouxadas(a sobrescrita pela filha não deve divergir da classe pai).
+  * Como resolver um problema quando se está usando herança e esta não atende a necessidade? com a composição. 
+* **Composição:** O uso de composição é para reaproveitar comportamentos, quando utilizado um componente(classe) como sendo atributo dentro de outra classe ao invés de usar a herança.
+  * Exemplo, quando utilizado um List não devemos expor os métodos get e set, devemos criar determinados métodos dentro da própria classe que acessam o atributo para realizar o que se deseja.  
+
 
 #### Injeção de dependência
 * o principal problema é que não se tem a rastreabilidade, ficam escondidas(grafo profundo).
@@ -74,4 +91,7 @@
 #### Template Method
 * Define o esqueleto de um algoritmo, adiando algumas etapas para as subclasses. O Método do Modelo permite que as subclasses redefinam certas etapas de um algoritmo sem alterar a estrutura do algoritmo.
 * **Que problema ele resolve?** é normalmente usado em estruturas de aplicativos baseadas em derivação fornecendo um conjunto de superclasses que fazem 90% do trabalho adiando operações específicas de aplicativos para métodos abstratos. 
-* **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.  
+* **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.
+
+#### Observer
+* 
