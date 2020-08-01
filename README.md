@@ -94,4 +94,5 @@
 * **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.
 
 #### Decorator
-* 
+* Serve para anexar responsabildiades adicionais e modificar a funcionalidade dinamicamente.
+* **Quando usar o Decorator?** Quando queremos adicionar responsabilidade dinamicamente em determinado Objeto sem afetar o Objeto adicional
