@@ -93,5 +93,5 @@
 * **Que problema ele resolve?** é normalmente usado em estruturas de aplicativos baseadas em derivação fornecendo um conjunto de superclasses que fazem 90% do trabalho adiando operações específicas de aplicativos para métodos abstratos. 
 * **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.
 
-#### Observer
+#### Decorator
 * 
