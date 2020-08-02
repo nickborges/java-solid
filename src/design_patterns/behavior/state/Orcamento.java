@@ -3,8 +3,8 @@ package design_patterns.behavior.state;
 public class Orcamento{
 
     protected double valor;
-
     protected OrcamentoState estadoAtual;
+    protected boolean descontoAplicado;
 
     public Orcamento(double valor) {
         this.valor = valor;
@@ -25,7 +25,6 @@ public class Orcamento{
 
     public void reprovar() {
         estadoAtual.reprovar(this);
-
     }
 
     public void finalizar() {

@@ -1,9 +1,17 @@
 package design_patterns.behavior.state;
 
 public class Aprovado implements OrcamentoState{
+    
+    boolean descontoAplicado;
+    
     @Override
     public void aplicaDescontoExtra(Orcamento orcamento) {
-        orcamento.valor -= orcamento.valor * 0.01;
+        if (!descontoAplicado){
+            orcamento.valor -= orcamento.valor * 0.01;
+            descontoAplicado = true;
+        } else{
+            throw new RuntimeException("Desconto já foi aplicado.");
+        }
     }
 
     @Override
