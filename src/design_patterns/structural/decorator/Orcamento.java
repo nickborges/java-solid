@@ -1,10 +1,10 @@
 package design_patterns.structural.decorator;
 
-public class Oracamento {
+public class Orcamento {
 
     private double valor;
 
-    public Oracamento(double valor) {
+    public Orcamento(double valor) {
         this.valor = valor;
     }
 

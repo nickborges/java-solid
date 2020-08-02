@@ -98,3 +98,6 @@
 * **Quando usar o Decorator?** 
   * Quando queremos adicionar responsabilidade dinamicamente em determinado Objeto sem afetar o Objeto original.
   * Quando temos comportamentos que podem ser compostos por comportamentos de outras classes envolvidas em uma mesma hierarquia.
+
+#### State
+*   

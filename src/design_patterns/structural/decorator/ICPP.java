@@ -12,12 +12,12 @@ public class ICPP extends ImpostoDecorator{
     }
 
     @Override
-    public double calcula(Oracamento orcamento) {
+    public double calcula(Orcamento orcamento) {
         return orcamento.getValor() * ICPP + calculaOutroImposto(orcamento);
     }
 
     @Override
-    public double total(Oracamento orcamento) {
+    public double total(Orcamento orcamento) {
         return orcamento.getValor()
                 + (orcamento.getValor() * ICPP + calculaOutroImposto(orcamento));
     }

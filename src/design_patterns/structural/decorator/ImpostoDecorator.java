@@ -11,15 +11,15 @@ public abstract class ImpostoDecorator {
         this.outroImpostoDecorator = outroImpostoDecorator;
     }
 
-    public abstract double calcula(Oracamento orcamento);
+    public abstract double calcula(Orcamento orcamento);
 
-    public abstract double total(Oracamento orcamento);
+    public abstract double total(Orcamento orcamento);
 
-    protected double calculaOutroImposto(Oracamento oracamento){
+    protected double calculaOutroImposto(Orcamento orcamento){
         if(outroImpostoDecorator == null){
             return 0;
         }
-        return outroImpostoDecorator.calcula(oracamento);
+        return outroImpostoDecorator.calcula(orcamento);
     }
 
 }

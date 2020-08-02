@@ -13,12 +13,12 @@ public class ICMS extends ImpostoDecorator{
     }
 
     @Override
-    public double calcula(Oracamento orcamento) {
+    public double calcula(Orcamento orcamento) {
         return orcamento.getValor() * ICMS + calculaOutroImposto(orcamento);
     }
 
     @Override
-    public double total(Oracamento orcamento) {
+    public double total(Orcamento orcamento) {
         return orcamento.getValor()
                 + (orcamento.getValor() * ICMS + calculaOutroImposto(orcamento));
     }
