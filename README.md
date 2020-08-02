@@ -100,4 +100,5 @@
   * Quando temos comportamentos que podem ser compostos por comportamentos de outras classes envolvidas em uma mesma hierarquia.
 
 #### State
-*   
+* Permite alterar o comportamento do objeto quando seu estado interno muda. Deixando as subclasses mudarem o estado atual em tempo de execução conforme necessário.
+* **Quando usar o State?** quando queremos representar diferentes estados de um contexto.
