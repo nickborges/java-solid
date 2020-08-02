@@ -1,4 +1,4 @@
-package design_patterns.behavior.state;
+package design_patterns.behavior.state.exemplo1;
 
 public class EmAprovacao implements OrcamentoState{
 
