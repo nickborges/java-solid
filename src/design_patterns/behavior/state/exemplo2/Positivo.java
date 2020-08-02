@@ -11,11 +11,11 @@ public class Positivo implements SaldoState {
     public void sacar(Conta conta, double valor) {
         conta.saldo -= valor;
 
-        validarSaldo(conta, valor);
+        validarSaldo(conta);
     }
 
-    private void validarSaldo(Conta conta, double valor){
-        if(conta.saldo < valor){
+    private void validarSaldo(Conta conta){
+        if(conta.saldo < 0){
             conta.estadoAtual = new Negativo();
         }
     }

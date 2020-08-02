@@ -13,8 +13,7 @@ public class StateMain {
         conta.sacar(900);
         System.out.println("Status = " + conta.estadoAtual + " Saldo = " + conta.saldo);
 
-        conta.sacar(100);
-        System.out.println("Status = " + conta.estadoAtual + " Saldo = " + conta.saldo);
+        //conta.sacar(100); //lança exception pois o saldo ficou negativo
 
     }
 
