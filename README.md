@@ -102,3 +102,7 @@
 #### State
 * Permite alterar o comportamento do objeto quando seu estado interno muda. Deixando as subclasses mudarem o estado atual em tempo de execução conforme necessário.
 * **Quando usar o State?** quando queremos representar diferentes estados de um contexto.
+
+#### Builder
+* Sempre que tivermos um objeto complexo de ser criado, que possui diversos atributos, ou que possui uma lógica de criação complicada, podemos esconder tudo isso em um Builder.
+* Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa
