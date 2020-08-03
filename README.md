@@ -92,21 +92,29 @@
 * Define o esqueleto de um algoritmo, adiando algumas etapas para as subclasses. O Método do Modelo permite que as subclasses redefinam certas etapas de um algoritmo sem alterar a estrutura do algoritmo.
 * **Que problema ele resolve?** é normalmente usado em estruturas de aplicativos baseadas em derivação fornecendo um conjunto de superclasses que fazem 90% do trabalho adiando operações específicas de aplicativos para métodos abstratos. 
 * **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.
+* Exemplo: Imagine que temos uma série de algoritmos matemáticos a serem implementados. Todos eles são bem parecidos, possuem a mesma estrutura. As variações são mínimas, por exemplo, um deles deve iterar até o fim da lista, enquanto o outro deve iterar até a metade dela.
 
 #### Decorator
 * Serve para anexar responsabildiades adicionais e modificar a funcionalidade dinamicamente.
 * **Quando usar o Decorator?** 
   * Quando queremos adicionar responsabilidade dinamicamente em determinado Objeto sem afetar o Objeto original.
   * Quando temos comportamentos que podem ser compostos por comportamentos de outras classes envolvidas em uma mesma hierarquia.
+* Exemplo: Imagine que estamos implementando uma sequência de filtros. Esses filtros precisam eliminar diversas faturas de uma lista, de acordo com algumas regras de negócio: faturas menores que 2000 devem ser eliminadas, faturas maiores do que 8000 devem ser eliminadas, faturas entre 3000 e 4500 que foram emitidas no estado de São Paulo devem ser eliminadas, e assim por diante. Uma implementação procedural produziria uma sequência de ifs enorme para verificar todas essas condições.
 
 #### State
 * Permite alterar o comportamento do objeto quando seu estado interno muda. Deixando as subclasses mudarem o estado atual em tempo de execução conforme necessário.
-* **Quando usar o State?** quando queremos representar diferentes estados de um contexto.
+* **Quando usar o State?** 
+  * quando queremos representar diferentes estados de um contexto.
+* Exemplo: Um Contrato pode sofrer tipos de alterações, descontos, ajustes enquanto está EM ANDAMENTO. O mesmo pode acontecer quando ele está FALTANDO ASSINATURA DO CLIENTE. Mas, após ASSINADO, o contrato não pode mais sofrer alterações.
 
 #### Builder
-* Sempre que tivermos um objeto complexo de ser criado, que possui diversos atributos, ou que possui uma lógica de criação complicada, podemos esconder tudo isso em um Builder.
-* Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa
+* Separa a construção complexa do objeto da sua representação para que o mesmo processo de construção possa criar diferentes representações. 
+* **Quando usar o State?**
+  * Sempre que tivermos um objeto complexo de ser criado, que possui diversos atributos, ou que possui uma lógica de criação complicada, podemos esconder tudo isso em um Builder.
+  * Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa
 
 #### Observer
-* Quando o acoplamento da classe está crescendo, ou quando há diversas ações diferentes a serem executadas após um determinado processo.
-* Permite que diversas ações sejam executadas de forma transparente à classe principal, reduzindo o acoplamento entre essas ações, facilitando a manutenção e evolução do código.
+* **Quando usar o State?**
+  * Quando o acoplamento da classe está crescendo, ou quando há diversas ações diferentes a serem executadas após um determinado processo.
+  * Permite que diversas ações sejam executadas de forma transparente à classe principal, reduzindo o acoplamento entre essas ações, facilitando a manutenção e evolução do código.
+* Exemplo: Imagina que você precise avisar 3 sistemas externos (auditoria, financeiro, e agências), assim que uma conta bancária receber um depósito.
