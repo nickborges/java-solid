@@ -31,7 +31,6 @@
 * **Composição:** O uso de composição é para reaproveitar comportamentos, quando utilizado um componente(classe) como sendo atributo dentro de outra classe ao invés de usar a herança.
   * Exemplo, quando utilizado um List não devemos expor os métodos get e set, devemos criar determinados métodos dentro da própria classe que acessam o atributo para realizar o que se deseja.  
 
-
 #### Injeção de dependência
 * o principal problema é que não se tem a rastreabilidade, ficam escondidas(grafo profundo).
 
