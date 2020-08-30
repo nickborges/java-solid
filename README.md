@@ -17,7 +17,7 @@
   
 #### Encapsulamento
 * Encapsular é esconder os detalhes da implementação dentro da classe.
-* Princípio *"Tell, Don't Ask'"*, refere-se a não pedir para fazer determinada ação exemplo getListaXpto e sim mandar fazer determinada ação, acessando o método criado na classe secundário em que se deseja alterar.
+* Princípio *"Tell, Don't Ask'"*, refere-se a não pedir para acessar determinado atributo e pedir para ele fazer determinada ação, exemplo getListaXpto, e sim criar métodos para fazerem determinadas ações, daí o chamador realiza a ação através destes métodos e não diretamente no atributo da classe.
 * **The Law Demeter**
   * Heurística referente ao encapsulamento dos dados de uma classe, onde não deve-se passar informações para tais atributos utilizando o getter e muito menos o setter evitando a cadeia a.getB().getC().getD().acao(). É necessario criar um método para realizar tal ação.
 * Como descobrir se um código está encapsulado ou não? respondendo as seguinte pergunta.
