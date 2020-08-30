@@ -113,7 +113,7 @@
   * Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa
 
 #### Observer
-* **Quando usar o State?**
+* **Quando usar o Observer?**
   * Quando o acoplamento da classe está crescendo, ou quando há diversas ações diferentes a serem executadas após um determinado processo.
   * Permite que diversas ações sejam executadas de forma transparente à classe principal, reduzindo o acoplamento entre essas ações, facilitando a manutenção e evolução do código.
-* Exemplo: Imagina que você precise avisar 3 sistemas externos (auditoria, financeiro, e agências), assim que uma conta bancária receber um depósito.
+* Exemplo: Imagine que você precise avisar 3 sistemas externos (auditoria, financeiro, e agências), assim que uma conta bancária receber um depósito.
