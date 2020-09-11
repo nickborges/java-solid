@@ -108,9 +108,14 @@
 
 #### Builder
 * Separa a construção complexa do objeto da sua representação para que o mesmo processo de construção possa criar diferentes representações. 
-* **Quando usar o State?**
+* **Quando usar o Builder?**
   * Sempre que tivermos um objeto complexo de ser criado, que possui diversos atributos, ou que possui uma lógica de criação complicada, podemos esconder tudo isso em um Builder.
   * Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa
+
+#### Factory
+* Factory é usado quando temos que isolar o processo de criação de um objeto em um único lugar. Essa factory pode descobrir como criar o objeto dentro dela própria, mas geralmente ela não precisa de muitas informações para criar o objeto.
+* **Quando usar Factory?**
+  *
 
 #### Observer
 * **Quando usar o Observer?**

@@ -1,4 +1,4 @@
-package design_patterns.criational.factory;
+package design_patterns.criational.factory.example1;
 
 public class Hay extends Food {
 
