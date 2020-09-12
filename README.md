@@ -143,3 +143,8 @@
 * **Quando usar o Memento?**
   * Quando você deseja criar instantâneos de um estado para um objeto.
   * Quando você precisa desfazer / refazer recursos.
+  
+#### Interpreter
+* Implemente um interpretador para uma linguagem, primeiro definindo uma gramática formal para essa linguagem e, em seguida, implementando essa gramática com uma hierarquia de classes (uma subclasse por produção).
+* **Quando usar o Interpreter?**
+  * O padrão Interpreter é geralmente útil para interpretar DSLs.
