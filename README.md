@@ -127,5 +127,5 @@
 #### Flyweight
 * Este padrão é usado para reduzir o uso de memória minimizando a quantidade instâncias de objetos e reutilizando-as.
 * **Quando usar o Flyweight?**
-  * 
-* Exemplo:
+  * Quando precisa ter varias instâncias de uma mesma classe.
+* Exemplo: 
