@@ -57,7 +57,7 @@
   * Composite
   * Decorator
   * Facade
-  * Flywight
+  * Flyweight
   * Proxy
 * **Behavior Design patterns:**
   * Se preocupam com o comportamento em tempo de execução do programa, como padrões de modelo dinâmico.
@@ -122,3 +122,10 @@
   * Quando o acoplamento da classe está crescendo, ou quando há diversas ações diferentes a serem executadas após um determinado processo.
   * Permite que diversas ações sejam executadas de forma transparente à classe principal, reduzindo o acoplamento entre essas ações, facilitando a manutenção e evolução do código.
 * Exemplo: Imagine que você precise avisar 3 sistemas externos (auditoria, financeiro, e agências), assim que uma conta bancária receber um depósito.
+
+
+#### Flyweight
+* Este padrão é usado para reduzir o uso de memória minimizando a quantidade instâncias de objetos e reutilizando-as.
+* **Quando usar o Flyweight?**
+  * 
+* Exemplo:
