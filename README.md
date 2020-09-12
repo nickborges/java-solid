@@ -126,6 +126,10 @@
 
 #### Flyweight
 * Este padrão é usado para reduzir o uso de memória minimizando a quantidade instâncias de objetos e reutilizando-as.
+* Sigleton vs Flyweight: 
+  * A ideia de ambos é garantir que existam apenas uma única referência para o objeto ao longo do programa.
+  * A diferença é que o Flyweight garante que existam apenas uma única instância de vários elementos. É um "singleton maior".
+* A própria JVM faz uso de um Flyweight internamente. Quando você declara um "int", e repete o mesmo valor de "int" em vários lugares, ela sempre devolve a mesma instância desse número. É um bom exemplo de implementação do padrão.
 * **Quando usar o Flyweight?**
   * Quando precisa ter varias instâncias de uma mesma classe.
 * Exemplo: 
