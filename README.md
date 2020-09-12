@@ -126,6 +126,9 @@
 
 #### Flyweight
 * Este padrão é usado para reduzir o uso de memória minimizando a quantidade instâncias de objetos e reutilizando-as.
+* Factory vs Flyweight:
+  * Uma Factory instancia uma classe que é importante/complexa, e seu processo de criação deve ser isolado.
+  * Um Flyweight serve para quando temos muitas instâncias do mesmo objeto andando pelo sistema, e precisamos economizar. Para tal, o Flyweight faz uso de uma fábrica modificada, que guarda essas instâncias.
 * Sigleton vs Flyweight: 
   * A ideia de ambos é garantir que existam apenas uma única referência para o objeto ao longo do programa.
   * A diferença é que o Flyweight garante que existam apenas uma única instância de vários elementos. É um "singleton maior".
@@ -133,3 +136,10 @@
 * **Quando usar o Flyweight?**
   * Quando precisa ter varias instâncias de uma mesma classe.
 * Exemplo: 
+
+#### Memento
+* Um memento é um objeto que armazena um instantâneo do estado interno de outro objeto.
+* Encapsule o estado de um objeto de forma que nenhuma entidade externa possa saber como o objeto está estruturado. Um objeto externo pode armazenar ou restaurar o estado de um objeto sem violar a integridade do objeto.
+* **Quando usar o Memento?**
+  * Quando você deseja criar instantâneos de um estado para um objeto.
+  * Quando você precisa desfazer / refazer recursos.
