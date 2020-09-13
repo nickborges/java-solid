@@ -154,3 +154,11 @@
 * **Quando usar o Visitor?**
   * Quando queremos é adicionar métodos efetivamente a uma classe sem a necessidade de derivar classes. Os Visitors também podem coletar informações ou realizar operações em todos os elementos de alguma agregação. 
     * Por exemplo, um Visitor pode testar a consistência de todos os elementos de uma agregação.
+    
+#### Adapter e Bridge
+* **Adapter:** Faça com que uma classe pareça suportar uma interface familiar que ela realmente não suporta. Dessa forma, o código existente pode alavancar novas classes desconhecidas como se fossem classes existentes e familiares, eliminando a necessidade de refatorar o código existente para acomodar as novas classes.
+  * **Quando usar Adapter:** 
+    * Quando usamos varios métodos estático por exemplo do próprio java, Calendar.algumacoisa(), criamos uma interface e uma classe concreta para implementar a lógica.
+* **Bridge:** Para desacoplar subsistemas de forma que qualquer um deles possa mudar radicalmente sem afetar nenhum código do outro, coloque um conjunto de interfaces entre dois subsistemas e código para essas interfaces.
+  * **Quando usar Bridge:**
+    * Quando queremos chamar um outro sistema, fazemos uma ponte entre eles através de uma interface e uma classe concreta que implementa a logica da chamada. 
