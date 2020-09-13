@@ -165,4 +165,13 @@
   * Detalhe: no exemplo Mapa m = new GoogleMaps(); Podemos fazer uso de uma Factory, por exemplo, que nos devolve a Bridge esperada naquele momento.
 * **Observação:**
   * A diferença é semântica. A ideia da Bridge é justamente ser uma ponte em dois mundos/sistemas.
-  * A ideia do Adapter é esconder alguma "sujeira", ou adaptar algo que é diferente e não bate com o sistema atual. 
+  * A ideia do Adapter é esconder alguma "sujeira", ou adaptar algo que é diferente e não bate com o sistema atual.
+  
+#### Command
+* Encapsular uma unidade de trabalho(comando) em um Objeto, assim pode-se enfileirar/registrar os comandos a serem executados em sequência. 
+* **Quando usar o Command ?**
+  * Quando temos que separar os comandos que serão executados do objeto que ele pertence. Um bom exemplo disso é o uso de filas de trabalho, adicionamos a uma lista de comandos e no final chamamos um método que vai processar todos estes comandos.
+* Observação: 
+  * Qual a diferença entre Command e Strategy? 
+    * A ideia do Command é abstrair um comando que deve ser executado, pois não é possível executá-lo naquele momento (pois precisamos por em uma fila ou coisa do tipo).
+    * Já no Strategy, a ideia é que você tenha uma estratégia (um algoritmo) para resolver um problema.
