@@ -161,4 +161,7 @@
     * Quando usamos varios métodos estático por exemplo do próprio java, Calendar.algumacoisa(), criamos uma interface e uma classe concreta para implementar a lógica.
 * **Bridge:** Para desacoplar subsistemas de forma que qualquer um deles possa mudar radicalmente sem afetar nenhum código do outro, coloque um conjunto de interfaces entre dois subsistemas e código para essas interfaces.
   * **Quando usar Bridge:**
-    * Quando queremos chamar um outro sistema, fazemos uma ponte entre eles através de uma interface e uma classe concreta que implementa a logica da chamada. 
+    * Quando queremos chamar um outro sistema, fazemos uma ponte entre eles através de uma interface e uma classe concreta que implementa a logica da chamada.
+* **Observação:**
+  * A diferença é semântica. A ideia da Bridge é justamente ser uma ponte em dois mundos/sistemas.
+  * A ideia do Adapter é esconder alguma "sujeira", ou adaptar algo que é diferente e não bate com o sistema atual. 
