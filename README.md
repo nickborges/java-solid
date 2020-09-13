@@ -162,6 +162,7 @@
 * **Bridge:** Para desacoplar subsistemas de forma que qualquer um deles possa mudar radicalmente sem afetar nenhum código do outro, coloque um conjunto de interfaces entre dois subsistemas e código para essas interfaces.
   * **Quando usar Bridge:**
     * Quando queremos chamar um outro sistema, fazemos uma ponte entre eles através de uma interface e uma classe concreta que implementa a logica da chamada.
+  * Detalhe: no exemplo Mapa m = new GoogleMaps(); Podemos fazer uso de uma Factory, por exemplo, que nos devolve a Bridge esperada naquele momento.
 * **Observação:**
   * A diferença é semântica. A ideia da Bridge é justamente ser uma ponte em dois mundos/sistemas.
   * A ideia do Adapter é esconder alguma "sujeira", ou adaptar algo que é diferente e não bate com o sistema atual. 
