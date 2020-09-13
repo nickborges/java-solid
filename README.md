@@ -175,3 +175,8 @@
   * Qual a diferença entre Command e Strategy? 
     * A ideia do Command é abstrair um comando que deve ser executado, pois não é possível executá-lo naquele momento (pois precisamos por em uma fila ou coisa do tipo).
     * Já no Strategy, a ideia é que você tenha uma estratégia (um algoritmo) para resolver um problema.
+  * Podemos usar **Memento** para restaurar estados de objetos que foram alterados por um Command. Podemos compor comandos, usando **Composite**.
+
+
+#### Considerações
+* Podemos utilizar padrões em conjunto dependendo da necessidade e tirar maior proveito deles.
