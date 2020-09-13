@@ -177,6 +177,9 @@
     * Já no Strategy, a ideia é que você tenha uma estratégia (um algoritmo) para resolver um problema.
   * Podemos usar **Memento** para restaurar estados de objetos que foram alterados por um Command. Podemos compor comandos, usando **Composite**.
 
+#### Facade
+* Fornece uma única interface por meio da qual todas as classes em um subsistema complexo são manipuladas. O Facade permite que você trate um subsistema complexo como se fosse um único objeto granulado com uma interface simples e fácil de usar.
 
 #### Considerações
 * Podemos utilizar padrões em conjunto dependendo da necessidade e tirar maior proveito deles.
+* **Facade** e **Singleton** são padrões de uso mais legados e são evitados de usar pois fazem uso de um variável global que percorre por todo sistema.
