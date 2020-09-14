@@ -75,7 +75,66 @@
   * Observer
   * State
   * Visitor  
+
+#### Abstract Factory
+* <span style="color:red">*colocar aqui a descrição*</span> 
+
+#### Builder
+* Separa a construção complexa do objeto da sua representação para que o mesmo processo de construção possa criar diferentes representações. 
+* **Quando usar o Builder?**
+  * Sempre que tivermos um objeto complexo de ser criado, que possui diversos atributos, ou que possui uma lógica de criação complicada, podemos esconder tudo isso em um Builder.
+  * Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa
   
+#### Factory
+* Factory é usado quando temos que isolar o processo de criação de um objeto em um único lugar. Essa factory pode descobrir como criar o objeto dentro dela própria, mas geralmente ela não precisa de muitas informações para criar o objeto.
+* **Quando usar Factory?**
+  *
+  
+#### Prototype
+* <span style="color:red">*colocar aqui a descrição*</span>
+
+
+#### Adapter e Bridge
+* **Adapter:** Faça com que uma classe pareça suportar uma interface familiar que ela realmente não suporta. Dessa forma, o código existente pode alavancar novas classes desconhecidas como se fossem classes existentes e familiares, eliminando a necessidade de refatorar o código existente para acomodar as novas classes.
+  * **Quando usar Adapter:** 
+    * Quando usamos varios métodos estático por exemplo do próprio java, Calendar.algumacoisa(), criamos uma interface e uma classe concreta para implementar a lógica.
+* **Bridge:** Para desacoplar subsistemas de forma que qualquer um deles possa mudar radicalmente sem afetar nenhum código do outro, coloque um conjunto de interfaces entre dois subsistemas e código para essas interfaces.
+  * **Quando usar Bridge:**
+    * Quando queremos chamar um outro sistema, fazemos uma ponte entre eles através de uma interface e uma classe concreta que implementa a logica da chamada.
+  * Detalhe: no exemplo Mapa m = new GoogleMaps(); Podemos fazer uso de uma Factory, por exemplo, que nos devolve a Bridge esperada naquele momento.
+* **Observação:**
+  * A diferença é semântica. A ideia da Bridge é justamente ser uma ponte em dois mundos/sistemas.
+  * A ideia do Adapter é esconder alguma "sujeira", ou adaptar algo que é diferente e não bate com o sistema atual.
+
+#### Composite
+* <span style="color:red">*colocar aqui a descrição*</span>
+  
+#### Decorator
+* Serve para anexar responsabildiades adicionais e modificar a funcionalidade dinamicamente.
+* **Quando usar o Decorator?** 
+  * Quando queremos adicionar responsabilidade dinamicamente em determinado Objeto sem afetar o Objeto original.
+  * Quando temos comportamentos que podem ser compostos por comportamentos de outras classes envolvidas em uma mesma hierarquia.
+* Exemplo: Imagine que estamos implementando uma sequência de filtros. Esses filtros precisam eliminar diversas faturas de uma lista, de acordo com algumas regras de negócio: faturas menores que 2000 devem ser eliminadas, faturas maiores do que 8000 devem ser eliminadas, faturas entre 3000 e 4500 que foram emitidas no estado de São Paulo devem ser eliminadas, e assim por diante. Uma implementação procedural produziria uma sequência de ifs enorme para verificar todas essas condições.
+
+#### Flyweight
+* Este padrão é usado para reduzir o uso de memória minimizando a quantidade instâncias de objetos e reutilizando-as.
+* Factory vs Flyweight:
+  * Uma Factory instancia uma classe que é importante/complexa, e seu processo de criação deve ser isolado.
+  * Um Flyweight serve para quando temos muitas instâncias do mesmo objeto andando pelo sistema, e precisamos economizar. Para tal, o Flyweight faz uso de uma fábrica modificada, que guarda essas instâncias.
+* Sigleton vs Flyweight: 
+  * A ideia de ambos é garantir que existam apenas uma única referência para o objeto ao longo do programa.
+  * A diferença é que o Flyweight garante que existam apenas uma única instância de vários elementos. É um "singleton maior".
+* A própria JVM faz uso de um Flyweight internamente. Quando você declara um "int", e repete o mesmo valor de "int" em vários lugares, ela sempre devolve a mesma instância desse número. É um bom exemplo de implementação do padrão.
+* **Quando usar o Flyweight?**
+  * Quando precisa ter varias instâncias de uma mesma classe.
+* Exemplo: 
+
+#### Proxy
+* <span style="color:red">*colocar aqui a descrição*</span> 
+  
+#### Facade
+* Fornece uma única interface por meio da qual todas as classes em um subsistema complexo são manipuladas. O Facade permite que você trate um subsistema complexo como se fosse um único objeto granulado com uma interface simples e fácil de usar.
+
 #### Strategy
 * É um padrão que permite mudar o comportamento do algorítimo em tempo de execução.
 * Define uma estratégia para executar algum algoritmo. Uma família de classes intercambiáveis, uma para cada algoritmo, implementa o entrelaçamento.
@@ -93,80 +152,6 @@
 * **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.
 * Exemplo: Imagine que temos uma série de algoritmos matemáticos a serem implementados. Todos eles são bem parecidos, possuem a mesma estrutura. As variações são mínimas, por exemplo, um deles deve iterar até o fim da lista, enquanto o outro deve iterar até a metade dela.
 
-#### Decorator
-* Serve para anexar responsabildiades adicionais e modificar a funcionalidade dinamicamente.
-* **Quando usar o Decorator?** 
-  * Quando queremos adicionar responsabilidade dinamicamente em determinado Objeto sem afetar o Objeto original.
-  * Quando temos comportamentos que podem ser compostos por comportamentos de outras classes envolvidas em uma mesma hierarquia.
-* Exemplo: Imagine que estamos implementando uma sequência de filtros. Esses filtros precisam eliminar diversas faturas de uma lista, de acordo com algumas regras de negócio: faturas menores que 2000 devem ser eliminadas, faturas maiores do que 8000 devem ser eliminadas, faturas entre 3000 e 4500 que foram emitidas no estado de São Paulo devem ser eliminadas, e assim por diante. Uma implementação procedural produziria uma sequência de ifs enorme para verificar todas essas condições.
-
-#### State
-* Permite alterar o comportamento do objeto quando seu estado interno muda. Deixando as subclasses mudarem o estado atual em tempo de execução conforme necessário.
-* **Quando usar o State?** 
-  * quando queremos representar diferentes estados de um contexto.
-* Exemplo: Um Contrato pode sofrer tipos de alterações, descontos, ajustes enquanto está EM ANDAMENTO. O mesmo pode acontecer quando ele está FALTANDO ASSINATURA DO CLIENTE. Mas, após ASSINADO, o contrato não pode mais sofrer alterações.
-
-#### Builder
-* Separa a construção complexa do objeto da sua representação para que o mesmo processo de construção possa criar diferentes representações. 
-* **Quando usar o Builder?**
-  * Sempre que tivermos um objeto complexo de ser criado, que possui diversos atributos, ou que possui uma lógica de criação complicada, podemos esconder tudo isso em um Builder.
-  * Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa
-
-#### Factory
-* Factory é usado quando temos que isolar o processo de criação de um objeto em um único lugar. Essa factory pode descobrir como criar o objeto dentro dela própria, mas geralmente ela não precisa de muitas informações para criar o objeto.
-* **Quando usar Factory?**
-  *
-
-#### Observer
-* **Quando usar o Observer?**
-  * Quando o acoplamento da classe está crescendo, ou quando há diversas ações diferentes a serem executadas após um determinado processo.
-  * Permite que diversas ações sejam executadas de forma transparente à classe principal, reduzindo o acoplamento entre essas ações, facilitando a manutenção e evolução do código.
-* Exemplo: Imagine que você precise avisar 3 sistemas externos (auditoria, financeiro, e agências), assim que uma conta bancária receber um depósito.
-
-
-#### Flyweight
-* Este padrão é usado para reduzir o uso de memória minimizando a quantidade instâncias de objetos e reutilizando-as.
-* Factory vs Flyweight:
-  * Uma Factory instancia uma classe que é importante/complexa, e seu processo de criação deve ser isolado.
-  * Um Flyweight serve para quando temos muitas instâncias do mesmo objeto andando pelo sistema, e precisamos economizar. Para tal, o Flyweight faz uso de uma fábrica modificada, que guarda essas instâncias.
-* Sigleton vs Flyweight: 
-  * A ideia de ambos é garantir que existam apenas uma única referência para o objeto ao longo do programa.
-  * A diferença é que o Flyweight garante que existam apenas uma única instância de vários elementos. É um "singleton maior".
-* A própria JVM faz uso de um Flyweight internamente. Quando você declara um "int", e repete o mesmo valor de "int" em vários lugares, ela sempre devolve a mesma instância desse número. É um bom exemplo de implementação do padrão.
-* **Quando usar o Flyweight?**
-  * Quando precisa ter varias instâncias de uma mesma classe.
-* Exemplo: 
-
-#### Memento
-* Um memento é um objeto que armazena um instantâneo do estado interno de outro objeto.
-* Encapsule o estado de um objeto de forma que nenhuma entidade externa possa saber como o objeto está estruturado. Um objeto externo pode armazenar ou restaurar o estado de um objeto sem violar a integridade do objeto.
-* **Quando usar o Memento?**
-  * Quando você deseja criar instantâneos de um estado para um objeto.
-  * Quando você precisa desfazer / refazer recursos.
-  
-#### Interpreter
-* Implemente um interpretador para uma linguagem, primeiro definindo uma gramática formal para essa linguagem e, em seguida, implementando essa gramática com uma hierarquia de classes (uma subclasse por produção).
-* **Quando usar o Interpreter?**
-  * O padrão Interpreter é geralmente útil para interpretar DSLs.
-  
-#### Visitor
-* Adicione operações a um objeto "host" fornecendo uma maneira para um visitante - um objeto que encapsula um algoritmo - acessar o estado interno do objeto host. 1YPically, esse padrão é usado para interagir com elementos de uma estrutura agregada. O visitante se move de um objeto para outro dentro do agregado.
-* **Quando usar o Visitor?**
-  * Quando queremos é adicionar métodos efetivamente a uma classe sem a necessidade de derivar classes. Os Visitors também podem coletar informações ou realizar operações em todos os elementos de alguma agregação. 
-    * Por exemplo, um Visitor pode testar a consistência de todos os elementos de uma agregação.
-    
-#### Adapter e Bridge
-* **Adapter:** Faça com que uma classe pareça suportar uma interface familiar que ela realmente não suporta. Dessa forma, o código existente pode alavancar novas classes desconhecidas como se fossem classes existentes e familiares, eliminando a necessidade de refatorar o código existente para acomodar as novas classes.
-  * **Quando usar Adapter:** 
-    * Quando usamos varios métodos estático por exemplo do próprio java, Calendar.algumacoisa(), criamos uma interface e uma classe concreta para implementar a lógica.
-* **Bridge:** Para desacoplar subsistemas de forma que qualquer um deles possa mudar radicalmente sem afetar nenhum código do outro, coloque um conjunto de interfaces entre dois subsistemas e código para essas interfaces.
-  * **Quando usar Bridge:**
-    * Quando queremos chamar um outro sistema, fazemos uma ponte entre eles através de uma interface e uma classe concreta que implementa a logica da chamada.
-  * Detalhe: no exemplo Mapa m = new GoogleMaps(); Podemos fazer uso de uma Factory, por exemplo, que nos devolve a Bridge esperada naquele momento.
-* **Observação:**
-  * A diferença é semântica. A ideia da Bridge é justamente ser uma ponte em dois mundos/sistemas.
-  * A ideia do Adapter é esconder alguma "sujeira", ou adaptar algo que é diferente e não bate com o sistema atual.
-  
 #### Command
 * Encapsular uma unidade de trabalho(comando) em um Objeto, assim pode-se enfileirar/registrar os comandos a serem executados em sequência. 
 * **Quando usar o Command ?**
@@ -177,8 +162,41 @@
     * Já no Strategy, a ideia é que você tenha uma estratégia (um algoritmo) para resolver um problema.
   * Podemos usar **Memento** para restaurar estados de objetos que foram alterados por um Command. Podemos compor comandos, usando **Composite**.
 
-#### Facade
-* Fornece uma única interface por meio da qual todas as classes em um subsistema complexo são manipuladas. O Facade permite que você trate um subsistema complexo como se fosse um único objeto granulado com uma interface simples e fácil de usar.
+#### Interpreter
+* Implemente um interpretador para uma linguagem, primeiro definindo uma gramática formal para essa linguagem e, em seguida, implementando essa gramática com uma hierarquia de classes (uma subclasse por produção).
+* **Quando usar o Interpreter?**
+  * O padrão Interpreter é geralmente útil para interpretar DSLs.
+
+#### Iterator
+* <span style="color:red">*colocar aqui a descrição*</span> 
+
+#### Mediator
+* <span style="color:red">*colocar aqui a descrição*</span>
+
+#### Memento
+* Um memento é um objeto que armazena um instantâneo do estado interno de outro objeto.
+* Encapsule o estado de um objeto de forma que nenhuma entidade externa possa saber como o objeto está estruturado. Um objeto externo pode armazenar ou restaurar o estado de um objeto sem violar a integridade do objeto.
+* **Quando usar o Memento?**
+  * Quando você deseja criar instantâneos de um estado para um objeto.
+  * Quando você precisa desfazer / refazer recursos.
+
+#### Observer
+* **Quando usar o Observer?**
+  * Quando o acoplamento da classe está crescendo, ou quando há diversas ações diferentes a serem executadas após um determinado processo.
+  * Permite que diversas ações sejam executadas de forma transparente à classe principal, reduzindo o acoplamento entre essas ações, facilitando a manutenção e evolução do código.
+* Exemplo: Imagine que você precise avisar 3 sistemas externos (auditoria, financeiro, e agências), assim que uma conta bancária receber um depósito.
+
+#### State
+* Permite alterar o comportamento do objeto quando seu estado interno muda. Deixando as subclasses mudarem o estado atual em tempo de execução conforme necessário.
+* **Quando usar o State?** 
+  * quando queremos representar diferentes estados de um contexto.
+* Exemplo: Um Contrato pode sofrer tipos de alterações, descontos, ajustes enquanto está EM ANDAMENTO. O mesmo pode acontecer quando ele está FALTANDO ASSINATURA DO CLIENTE. Mas, após ASSINADO, o contrato não pode mais sofrer alterações.
+  
+#### Visitor
+* Adicione operações a um objeto "host" fornecendo uma maneira para um visitante - um objeto que encapsula um algoritmo - acessar o estado interno do objeto host. 1YPically, esse padrão é usado para interagir com elementos de uma estrutura agregada. O visitante se move de um objeto para outro dentro do agregado.
+* **Quando usar o Visitor?**
+  * Quando queremos é adicionar métodos efetivamente a uma classe sem a necessidade de derivar classes. Os Visitors também podem coletar informações ou realizar operações em todos os elementos de alguma agregação. 
+    * Por exemplo, um Visitor pode testar a consistência de todos os elementos de uma agregação.
 
 #### Considerações
 * Podemos utilizar padrões em conjunto dependendo da necessidade e tirar maior proveito deles.
