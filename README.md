@@ -77,7 +77,9 @@
   * Visitor  
 
 #### Abstract Factory
-* <span style="color:red">*colocar aqui a descrição*</span> 
+```diff
+- colocar aqui a descrição
+```
 
 #### Builder
 * Separa a construção complexa do objeto da sua representação para que o mesmo processo de construção possa criar diferentes representações. 
@@ -130,9 +132,9 @@
 * Exemplo: 
 
 #### Proxy
-<div class="text-red">
-* colocar aqui a descrição
-</div>
+```diff
+- colocar aqui a descrição
+```
   
 #### Facade
 * Fornece uma única interface por meio da qual todas as classes em um subsistema complexo são manipuladas. O Facade permite que você trate um subsistema complexo como se fosse um único objeto granulado com uma interface simples e fácil de usar.
@@ -170,7 +172,9 @@
   * O padrão Interpreter é geralmente útil para interpretar DSLs.
 
 #### Iterator
-* <span style="color:red">*colocar aqui a descrição*</span> 
+```diff
+- colocar aqui a descrição
+```
 
 #### Mediator
 * <span style="color:red">*colocar aqui a descrição*</span>
