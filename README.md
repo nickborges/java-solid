@@ -93,7 +93,9 @@
   *
   
 #### Prototype
-* <span style="color:red">*colocar aqui a descrição*</span>
+```diff
+- colocar aqui a descrição
+```
 
 
 #### Adapter e Bridge
@@ -109,7 +111,9 @@
   * A ideia do Adapter é esconder alguma "sujeira", ou adaptar algo que é diferente e não bate com o sistema atual.
 
 #### Composite
-* <span style="color:red">*colocar aqui a descrição*</span>
+```diff
+- colocar aqui a descrição
+```
   
 #### Decorator
 * Serve para anexar responsabildiades adicionais e modificar a funcionalidade dinamicamente.
@@ -177,7 +181,9 @@
 ```
 
 #### Mediator
-* <span style="color:red">*colocar aqui a descrição*</span>
+```diff
+- colocar aqui a descrição
+```
 
 #### Memento
 * Um memento é um objeto que armazena um instantâneo do estado interno de outro objeto.
