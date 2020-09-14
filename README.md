@@ -76,29 +76,29 @@
   * State
   * Visitor  
 
-#### Abstract Factory
+### Abstract Factory
 ```diff
 - colocar aqui a descrição
 ```
 
-#### Builder
+### Builder
 * Separa a construção complexa do objeto da sua representação para que o mesmo processo de construção possa criar diferentes representações. 
 * **Quando usar o Builder?**
   * Sempre que tivermos um objeto complexo de ser criado, que possui diversos atributos, ou que possui uma lógica de criação complicada, podemos esconder tudo isso em um Builder.
   * Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa
   
-#### Factory
+### Factory
 * Factory é usado quando temos que isolar o processo de criação de um objeto em um único lugar. Essa factory pode descobrir como criar o objeto dentro dela própria, mas geralmente ela não precisa de muitas informações para criar o objeto.
 * **Quando usar Factory?**
   *
   
-#### Prototype
+### Prototype
 ```diff
 - colocar aqui a descrição
 ```
 
 
-#### Adapter e Bridge
+### Adapter e Bridge
 * **Adapter:** Faça com que uma classe pareça suportar uma interface familiar que ela realmente não suporta. Dessa forma, o código existente pode alavancar novas classes desconhecidas como se fossem classes existentes e familiares, eliminando a necessidade de refatorar o código existente para acomodar as novas classes.
   * **Quando usar Adapter:** 
     * Quando usamos varios métodos estático por exemplo do próprio java, Calendar.algumacoisa(), criamos uma interface e uma classe concreta para implementar a lógica.
@@ -110,19 +110,19 @@
   * A diferença é semântica. A ideia da Bridge é justamente ser uma ponte em dois mundos/sistemas.
   * A ideia do Adapter é esconder alguma "sujeira", ou adaptar algo que é diferente e não bate com o sistema atual.
 
-#### Composite
+### Composite
 ```diff
 - colocar aqui a descrição
 ```
   
-#### Decorator
+### Decorator
 * Serve para anexar responsabildiades adicionais e modificar a funcionalidade dinamicamente.
 * **Quando usar o Decorator?** 
   * Quando queremos adicionar responsabilidade dinamicamente em determinado Objeto sem afetar o Objeto original.
   * Quando temos comportamentos que podem ser compostos por comportamentos de outras classes envolvidas em uma mesma hierarquia.
 * Exemplo: Imagine que estamos implementando uma sequência de filtros. Esses filtros precisam eliminar diversas faturas de uma lista, de acordo com algumas regras de negócio: faturas menores que 2000 devem ser eliminadas, faturas maiores do que 8000 devem ser eliminadas, faturas entre 3000 e 4500 que foram emitidas no estado de São Paulo devem ser eliminadas, e assim por diante. Uma implementação procedural produziria uma sequência de ifs enorme para verificar todas essas condições.
 
-#### Flyweight
+### Flyweight
 * Este padrão é usado para reduzir o uso de memória minimizando a quantidade instâncias de objetos e reutilizando-as.
 * Factory vs Flyweight:
   * Uma Factory instancia uma classe que é importante/complexa, e seu processo de criação deve ser isolado.
@@ -135,32 +135,32 @@
   * Quando precisa ter varias instâncias de uma mesma classe.
 * Exemplo: 
 
-#### Proxy
+### Proxy
 ```diff
 - colocar aqui a descrição
 ```
   
-#### Facade
+### Facade
 * Fornece uma única interface por meio da qual todas as classes em um subsistema complexo são manipuladas. O Facade permite que você trate um subsistema complexo como se fosse um único objeto granulado com uma interface simples e fácil de usar.
 
-#### Strategy
+### Strategy
 * É um padrão que permite mudar o comportamento do algorítimo em tempo de execução.
 * Define uma estratégia para executar algum algoritmo. Uma família de classes intercambiáveis, uma para cada algoritmo, implementa o entrelaçamento.
 * **Quando usar strategy?** quando temos um conjunto de algoritmos similares, e precisamos alternar entre eles em diferentes pedaços da aplicação.
 
-#### Chain Of Responsibility
+### Chain Of Responsibility
 * A intenção deste padrão é evitar o acoplamento do remetente de uma solicitação ao seu receptor, ao dar a mais de um objeto a oportunidade de tratar essa solicitação. Encadear os objetos receptores, passando a solicitação ao longo da cadeia até que um objeto a trate.
 * A delegação das solicitações pode formar uma árvore de recursão, com um mecanismo especial para inserção de novos receptores no final da cadeia existente.
 * Diminui o **acoplamento** por evitar a associação explícita do remetente de uma solicitação ao seu receptor e dar a mais de um objeto a oportunidade de tratar a solicitação.
 * **Quando usar o Chain of Responsibility?**  quando temos vários comandos a serem executados em sequência, e sabemos também qual o próximo cenário que deve ser validado, caso o anterior não satisfaça a condição(substitui os if's).
 
-#### Template Method
+### Template Method
 * Define o esqueleto de um algoritmo, adiando algumas etapas para as subclasses. O Método do Modelo permite que as subclasses redefinam certas etapas de um algoritmo sem alterar a estrutura do algoritmo.
 * **Que problema ele resolve?** é normalmente usado em estruturas de aplicativos baseadas em derivação fornecendo um conjunto de superclasses que fazem 90% do trabalho adiando operações específicas de aplicativos para métodos abstratos. 
 * **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.
 * Exemplo: Imagine que temos uma série de algoritmos matemáticos a serem implementados. Todos eles são bem parecidos, possuem a mesma estrutura. As variações são mínimas, por exemplo, um deles deve iterar até o fim da lista, enquanto o outro deve iterar até a metade dela.
 
-#### Command
+### Command
 * Encapsular uma unidade de trabalho(comando) em um Objeto, assim pode-se enfileirar/registrar os comandos a serem executados em sequência. 
 * **Quando usar o Command ?**
   * Quando temos que separar os comandos que serão executados do objeto que ele pertence. Um bom exemplo disso é o uso de filas de trabalho, adicionamos a uma lista de comandos e no final chamamos um método que vai processar todos estes comandos.
@@ -170,46 +170,46 @@
     * Já no Strategy, a ideia é que você tenha uma estratégia (um algoritmo) para resolver um problema.
   * Podemos usar **Memento** para restaurar estados de objetos que foram alterados por um Command. Podemos compor comandos, usando **Composite**.
 
-#### Interpreter
+### Interpreter
 * Implemente um interpretador para uma linguagem, primeiro definindo uma gramática formal para essa linguagem e, em seguida, implementando essa gramática com uma hierarquia de classes (uma subclasse por produção).
 * **Quando usar o Interpreter?**
   * O padrão Interpreter é geralmente útil para interpretar DSLs.
 
-#### Iterator
+### Iterator
 ```diff
 - colocar aqui a descrição
 ```
 
-#### Mediator
+### Mediator
 ```diff
 - colocar aqui a descrição
 ```
 
-#### Memento
+### Memento
 * Um memento é um objeto que armazena um instantâneo do estado interno de outro objeto.
 * Encapsule o estado de um objeto de forma que nenhuma entidade externa possa saber como o objeto está estruturado. Um objeto externo pode armazenar ou restaurar o estado de um objeto sem violar a integridade do objeto.
 * **Quando usar o Memento?**
   * Quando você deseja criar instantâneos de um estado para um objeto.
   * Quando você precisa desfazer / refazer recursos.
 
-#### Observer
+### Observer
 * **Quando usar o Observer?**
   * Quando o acoplamento da classe está crescendo, ou quando há diversas ações diferentes a serem executadas após um determinado processo.
   * Permite que diversas ações sejam executadas de forma transparente à classe principal, reduzindo o acoplamento entre essas ações, facilitando a manutenção e evolução do código.
 * Exemplo: Imagine que você precise avisar 3 sistemas externos (auditoria, financeiro, e agências), assim que uma conta bancária receber um depósito.
 
-#### State
+### State
 * Permite alterar o comportamento do objeto quando seu estado interno muda. Deixando as subclasses mudarem o estado atual em tempo de execução conforme necessário.
 * **Quando usar o State?** 
   * quando queremos representar diferentes estados de um contexto.
 * Exemplo: Um Contrato pode sofrer tipos de alterações, descontos, ajustes enquanto está EM ANDAMENTO. O mesmo pode acontecer quando ele está FALTANDO ASSINATURA DO CLIENTE. Mas, após ASSINADO, o contrato não pode mais sofrer alterações.
   
-#### Visitor
+### Visitor
 * Adicione operações a um objeto "host" fornecendo uma maneira para um visitante - um objeto que encapsula um algoritmo - acessar o estado interno do objeto host. 1YPically, esse padrão é usado para interagir com elementos de uma estrutura agregada. O visitante se move de um objeto para outro dentro do agregado.
 * **Quando usar o Visitor?**
   * Quando queremos é adicionar métodos efetivamente a uma classe sem a necessidade de derivar classes. Os Visitors também podem coletar informações ou realizar operações em todos os elementos de alguma agregação. 
     * Por exemplo, um Visitor pode testar a consistência de todos os elementos de uma agregação.
 
-#### Considerações
+### Considerações
 * Podemos utilizar padrões em conjunto dependendo da necessidade e tirar maior proveito deles.
 * **Facade** e **Singleton** são padrões de uso mais legados e são evitados de usar pois fazem uso de um variável global que percorre por todo sistema.
