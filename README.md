@@ -207,7 +207,7 @@
 ### Visitor
 * Adicione operações a um objeto "host" fornecendo uma maneira para um visitante - um objeto que encapsula um algoritmo - acessar o estado interno do objeto host. 1YPically, esse padrão é usado para interagir com elementos de uma estrutura agregada. O visitante se move de um objeto para outro dentro do agregado.
 * **Quando usar o Visitor?**
-  * Quando queremos é adicionar métodos efetivamente a uma classe sem a necessidade de derivar classes. Os Visitors também podem coletar informações ou realizar operações em todos os elementos de alguma agregação. 
+  * Quando queremos adicionar métodos efetivamente a uma classe sem a necessidade de derivar classes. Os Visitors também podem coletar informações ou realizar operações em todos os elementos de alguma agregação. 
     * Por exemplo, um Visitor pode testar a consistência de todos os elementos de uma agregação.
 
 ### Considerações
