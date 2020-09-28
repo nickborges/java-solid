@@ -146,7 +146,7 @@
 ### Strategy
 * É um padrão que permite mudar o comportamento do algorítimo em tempo de execução.
 * Define uma estratégia para executar algum algoritmo. Uma família de classes intercambiáveis, uma para cada algoritmo, implementa o entrelaçamento.
-* **Quando usar strategy?** quando temos um conjunto de algoritmos similares, e precisamos alternar entre eles em diferentes pedaços da aplicação.
+* **Quando usar status?** quando temos um conjunto de algoritmos similares, e precisamos alternar entre eles em diferentes pedaços da aplicação.
 
 ### Chain Of Responsibility
 * A intenção deste padrão é evitar o acoplamento do remetente de uma solicitação ao seu receptor, ao dar a mais de um objeto a oportunidade de tratar essa solicitação. Encadear os objetos receptores, passando a solicitação ao longo da cadeia até que um objeto a trate.
@@ -201,7 +201,7 @@
 ### State
 * Permite alterar o comportamento do objeto quando seu estado interno muda. Deixando as subclasses mudarem o estado atual em tempo de execução conforme necessário.
 * **Quando usar o State?** 
-  * quando queremos representar diferentes estados de um contexto.
+  * quando queremos representar diferentes estados de um marcadorStatus.
 * Exemplo: Um Contrato pode sofrer tipos de alterações, descontos, ajustes enquanto está EM ANDAMENTO. O mesmo pode acontecer quando ele está FALTANDO ASSINATURA DO CLIENTE. Mas, após ASSINADO, o contrato não pode mais sofrer alterações.
   
 ### Visitor
