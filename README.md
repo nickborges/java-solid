@@ -2,9 +2,9 @@
 #### SOLID
 * [S]ingle Responsibility Principle (Coesão)
 * [O]pen/Closed Principle (Encapsulamento, classes fechadas para modificação mas abertas para extensão)
-* [L]iskov Substitution Principle (Herança, todas as ações devem ter pré-condições e pós condições)
-* [I]nterface Segregation Principle (A interface deve prover para as filhas, somente com coisas que elas precisam)
-* [D]ependency Inversion Principle (Depender sempre da classe mais estável(Abstração), Abstrações devem depender de abstrações, e implementação deve depender de abstração).
+* [L]iskov Substitution Principle (Herança vs Composição, todas as ações devem ter pré-condições e pós condições)
+* [I]nterface Segregation Principle (A interface deve prover para as filhas, somente com coisas que elas precisam, exemplo: criar interfaces distintas para que seja possível extende-las separadamente)
+* [D]ependency Inversion Principle (Depender sempre da classe mais estável(Abstração), Abstrações devem depender de abstrações, e implementação deve depender de abstração, exemplo interfaces).
 
 #### Coesão
 * Refere-se ao princípio da responsabilidade única, cada classe deve ter a sua responsabilidade(**Single Responsibility Principle(SRP)**) 
@@ -40,7 +40,7 @@
 
 ## GOF - Design Patterns
 * **Identificação:** qual o problema? solução possível(Design Pattern)?
-* **Criational Design patterns:**
+* **Creational Design patterns:**
   * São padrões de design que lidam com mecanismos de criação de objetos, tentando criar objetos de maneira adequada à situação. A forma básica de criação de objeto pode resultar em problemas de design ou adicionar complexidade ao design. Os padrões de design criacional resolvem esse problema controlando a criação desse objeto.
   * Definem a melhor maneira possível de criar um objeto, considerando a reutilização e a mutabilidade. Isso descreve a melhor maneira de lidar com a instanciação. A codificação embutida da instanciação real é uma armadilha e deve ser evitada se a reutilização e a troca forem desejadas.
   * Abstract Factory
@@ -101,7 +101,7 @@
 ### Adapter e Bridge
 * **Adapter:** Faça com que uma classe pareça suportar uma interface familiar que ela realmente não suporta. Dessa forma, o código existente pode alavancar novas classes desconhecidas como se fossem classes existentes e familiares, eliminando a necessidade de refatorar o código existente para acomodar as novas classes.
   * **Quando usar Adapter:** 
-    * Quando usamos varios métodos estático por exemplo do próprio java, Calendar.algumacoisa(), criamos uma interface e uma classe concreta para implementar a lógica.
+    * Quando usamos varios métodos estáticos por exemplo do próprio java, Calendar.algumacoisa(), criamos uma interface e uma classe concreta para implementar a lógica.
 * **Bridge:** Para desacoplar subsistemas de forma que qualquer um deles possa mudar radicalmente sem afetar nenhum código do outro, coloque um conjunto de interfaces entre dois subsistemas e código para essas interfaces.
   * **Quando usar Bridge:**
     * Quando queremos chamar um outro sistema, fazemos uma ponte entre eles através de uma interface e uma classe concreta que implementa a logica da chamada.
@@ -146,19 +146,22 @@
 ### Strategy
 * É um padrão que permite mudar o comportamento do algorítimo em tempo de execução.
 * Define uma estratégia para executar algum algoritmo. Uma família de classes intercambiáveis, uma para cada algoritmo, implementa o entrelaçamento.
-* **Quando usar status?** quando temos um conjunto de algoritmos similares, e precisamos alternar entre eles em diferentes pedaços da aplicação.
+* **Quando usar Strategy?** quando temos um conjunto de algoritmos similares, e precisamos alternar entre eles em diferentes pedaços da aplicação.
+* **Motivação:** segregar diversos algoritmos para uma ação, resultando na possibilidade de vários ifs(separar as regras(ifs) em classes).
 
 ### Chain Of Responsibility
-* A intenção deste padrão é evitar o acoplamento do remetente de uma solicitação ao seu receptor, ao dar a mais de um objeto a oportunidade de tratar essa solicitação. Encadear os objetos receptores, passando a solicitação ao longo da cadeia até que um objeto a trate.
+* **Motivação:** A intenção deste padrão é evitar o acoplamento do remetente de uma solicitação ao seu receptor, ao dar a mais de um objeto a oportunidade de tratar essa solicitação. Encadear os objetos receptores, passando a solicitação ao longo da cadeia até que um objeto a trate.
 * A delegação das solicitações pode formar uma árvore de recursão, com um mecanismo especial para inserção de novos receptores no final da cadeia existente.
 * Diminui o **acoplamento** por evitar a associação explícita do remetente de uma solicitação ao seu receptor e dar a mais de um objeto a oportunidade de tratar a solicitação.
-* **Quando usar o Chain of Responsibility?**  quando temos vários comandos a serem executados em sequência, e sabemos também qual o próximo cenário que deve ser validado, caso o anterior não satisfaça a condição(substitui os if's).
+* **Quando usar o Chain of Responsibility?**  quando temos vários comandos a serem executados em sequência, e sabemos também qual o próximo cenário que deve ser validado, caso o anterior não satisfaça a condição(substitui os if's). 
+* pode ser utilizado com o parttern **Template Method**
 
 ### Template Method
-* Define o esqueleto de um algoritmo, adiando algumas etapas para as subclasses. O Método do Modelo permite que as subclasses redefinam certas etapas de um algoritmo sem alterar a estrutura do algoritmo.
+* **Motivação:** Reaproveitar trechos de códigos comuns, evitando duplicações. Define o esqueleto de um algoritmo, adiando algumas etapas para as subclasses. O Método do Modelo permite que as subclasses redefinam certas etapas de um algoritmo sem alterar a estrutura do algoritmo.
 * **Que problema ele resolve?** é normalmente usado em estruturas de aplicativos baseadas em derivação fornecendo um conjunto de superclasses que fazem 90% do trabalho adiando operações específicas de aplicativos para métodos abstratos. 
 * **Quando usar o Template Method?** quando se tem classes com comportamentos pareceidos.
 * Exemplo: Imagine que temos uma série de algoritmos matemáticos a serem implementados. Todos eles são bem parecidos, possuem a mesma estrutura. As variações são mínimas, por exemplo, um deles deve iterar até o fim da lista, enquanto o outro deve iterar até a metade dela.
+* pode ser utilizado com o parttern **Chain Of Responsibility**
 
 ### Command
 * Encapsular uma unidade de trabalho(comando) em um Objeto, assim pode-se enfileirar/registrar os comandos a serem executados em sequência. 
